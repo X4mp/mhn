@@ -67,7 +67,7 @@ echo "==========================================================="
 python generateconfig.py
 
 echo -e "\nInitializing database, please be patient. This can take several minutes"
-python initdatabase.py
+#python initdatabase.py
 cd $MHN_HOME
 
 mkdir -p /opt/www
