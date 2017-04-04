@@ -32,12 +32,12 @@ pip install -r requirements.txt
 
 cat >> hpfeeds-collector.conf <<EOF
 {
-  'host': '$HPF_HOST',
-  'port' : $HPF_PORT,
-  'channel' : 'samba.fileaudit',
-  'ident' : '$HPF_IDENT',
-  'secret' : '$HPF_SECRET',
-  'tail_file' : '/var/log/samba/audit.log'
+  "host": "$HPF_HOST",
+  "port" : $HPF_PORT,
+  "channel" : "samba.fileaudit",
+  "ident" : "$HPF_IDENT",
+  "secret" : "$HPF_SECRET",
+  "tail_file" : "/var/log/samba/audit.log"
 
 }
 EOF
@@ -45,7 +45,7 @@ EOF
 # Set up supervisor
 cat > /etc/supervisor/conf.d/collector.conf <<EOF
 [program:hpfeeds-collector]
-command=/usr/bin/python /opt/hpfeeds-collector/collector.py
+command=/usr/bin/python /opt/hpfeeds-collector/collector.py /opt/hpfeeds-collector/hpfeeds-collector.conf
 stdout_logfile=/var/log/collector.log
 stderr_logfile=/var/log/collector.err
 autostart=true
