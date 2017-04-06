@@ -155,6 +155,7 @@ def create_clean_db():
             'Ubuntu - Shockpot Sinkhole': path.abspath('../scripts/deploy_shockpot_sinkhole.sh'),
             'Redhat/Centos - Kippo': path.abspath('../scripts/deploy_kippo-centos.sh'),
 	    'Ubuntu - Collector': path.abspath('../scripts/deploy_collector.sh'),
+	    'Ubuntu - DC Collector': path.abspath('../scripts/deploy_dc_collector.sh'),
         }
         for honeypot, deploypath in deployscripts.iteritems():
 
