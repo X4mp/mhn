@@ -43,11 +43,11 @@ cat >> hpfeeds-collector.conf <<EOF
 EOF
 
 # Set up supervisor
-cat > /etc/supervisor/conf.d/collector.conf <<EOF
+cat > /etc/supervisor/conf.d/samba-fileaudit-collector.conf <<EOF
 [program:hpfeeds-collector]
 command=/usr/bin/python /opt/hpfeeds-collector/collector.py /opt/hpfeeds-collector/hpfeeds-collector.conf
-stdout_logfile=/var/log/collector.log
-stderr_logfile=/var/log/collector.err
+stdout_logfile=/var/log/audit-collector.log
+stderr_logfile=/var/log/audit-collector.err
 autostart=true
 autorestart=true
 redirect_stderr=true

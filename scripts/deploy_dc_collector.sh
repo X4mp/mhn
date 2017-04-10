@@ -43,7 +43,7 @@ cat >> samba-dc-hpfeeds.conf <<EOF
 EOF
 
 # Set up supervisor
-cat > /etc/supervisor/conf.d/collector.conf <<EOF
+cat > /etc/supervisor/conf.d/collector-dc.conf <<EOF
 [program:hpfeeds-collector-dc]
 command=/usr/bin/python /opt/samba-dc-hpfeeds/collector.py /opt/samba-dc-hpfeeds/samba-dc-hpfeeds.conf
 stdout_logfile=/var/log/collector.log
